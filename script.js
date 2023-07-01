@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const sizeSlider = document.querySelector("#sizeSlider");
 let resolution = 16;
 let containerSize = container.clientWidth;
 let color = "black";
@@ -8,6 +9,14 @@ newBoard();
 function changeColor(drawBox){ 
     drawBox.style.backgroundColor = (color);
 }
+
+sizeSlider.oninput = function() {
+    resolution = this.value;
+    document.querySelectorAll(".drawBox").forEach(box => box.remove());
+    newBoard();
+    }
+    
+
 
 function newBoard(){
     let boxHeight = containerSize / resolution;

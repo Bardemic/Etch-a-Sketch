@@ -6,6 +6,6 @@
     border: 3px solid black;
 }
 
-.drawBox {
+.drawBox:hover {
     background-color: rgb(157, 118, 118);
 }

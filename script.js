@@ -1,8 +1,13 @@
 const container = document.querySelector(".container");
 let resolution = 16;
 let containerSize = container.clientWidth;
-
+let color = "black";
 newBoard();
+
+
+function changeColor(drawBox){ 
+    drawBox.style.backgroundColor = (color);
+}
 
 function newBoard(){
     let boxHeight = containerSize / resolution;
@@ -12,6 +17,7 @@ function newBoard(){
             box.classList.add("drawBox");
             box.style.width = `${boxHeight}px`;
             box.style.height = `${boxHeight}px`;
+            box.addEventListener('mouseover', () => changeColor(box));
             container.append(box);
         }
     }

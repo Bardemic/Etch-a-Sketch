@@ -3,11 +3,16 @@ const sizeSlider = document.querySelector("#sizeSlider");
 let resolution = 16;
 let containerSize = container.clientWidth;
 let color = "black";
+let randomColor = true;
 newBoard();
 
 
 function changeColor(drawBox){ 
-    drawBox.style.backgroundColor = (color);
+    let rColor = Math.floor(Math.random()*16777215).toString(16);
+    if(randomColor) {
+        drawBox.style.backgroundColor = `#${rColor}`;
+    }
+    //drawBox.style.backgroundColor = (color);
 }
 
 sizeSlider.oninput = function() {

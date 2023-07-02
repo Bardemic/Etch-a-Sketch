@@ -22,7 +22,7 @@ h1, h3, button {
     font-family: monospace;
     color: #F0F4EF;
 }
-.container {
+.canvas {
     display: flex;
     flex-wrap: wrap;
     width: 400px;
@@ -52,7 +52,7 @@ h1, h3, button {
     background-color: #F0F4EF;
 }
 
-.container, .settings {
+.canvas, .settings {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
 }
 

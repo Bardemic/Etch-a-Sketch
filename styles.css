@@ -39,7 +39,14 @@ h1, h3, button {
     text-align: center;
 }
 
+.optionsDiv {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
 .settings {
+    margin: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
